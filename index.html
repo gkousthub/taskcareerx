@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Recipe page</title>
+    <style>
+        :root {
+            --Background-color: hsl(30, 54%, 90%);
+            --White: hsl(0, 0%, 100%);
+            --Rose-White: hsl(330, 100%, 98%);
+            --Light-Grey: hsl(30, 18%, 87%);
+            --Wenge-Brown: hsl(30, 10%, 34%);
+            --Dark-Charcoal: hsl(24, 5%, 18%);
+            --Nutmeg: hsl(14, 45%, 36%);
+            --Dark-Raspberry: hsl(332, 51%, 32%);
+            --border-radius: 10px;
+        }
+
+        @font-face {
+            font-family: "outfit";
+            src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+        }
+
+        @font-face {
+            font-family: "young-serif";
+            src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+        }
+
+        body {
+            background-color: var(--Background-color);
+            font-family: "outfit", sans-serif;
+            font-size: 16px;
+        }
+
+        .card {
+            margin: 100px auto;
+            border: 0px;
+            width: 65%;
+            background-color: var(--White);
+            color: var(--Wenge-Brown);
+            border-radius: 15px;
+            padding: 15px;
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+            border-radius: var(--border-radius);
+        }
+
+        .card-head {
+            padding: 20px 20px 0 20px;
+        }
+
+        .card h1 {
+            color: var(--Dark-Charcoal);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "young-serif", sans-serif;
+            font-weight: 400;
+        }
+
+        h2 {
+            color: var(--Nutmeg);
+        }
+
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+
+        .preparation-time {
+            background-color: var(--Rose-White);
+            padding: 20px;
+            margin: 20px 10px;
+            border-radius: var(--border-radius);
+        }
+
+        .preparation-time h2 {
+            color: var(--Dark-Raspberry);
+            font-family: "outfit", sans-serif;
+            font-weight: 600;
+            font-size: 21px;
+        }
+
+        .preparation-time li::marker {
+            color: var(--Dark-Raspberry);
+        }
+
+        li {
+            padding-left: 10px;
+        }
+
+        li::marker {
+            color: var(--Nutmeg);
+        }
+
+        ol li::marker {
+            font-weight: 800;
+        }
+
+        h1 {
+            font-family: "young-serif";
+            margin-top: 10px;
+        }
+
+        .nutritions {
+            margin: 30px;
+        }
+
+        .nutritions .amount {
+            color: var(--Nutmeg);
+            font-weight: 600;
+        }
+
+        .preparation-time,
+        .instructions,
+        .ingredients {
+            line-height: 30px;
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                margin: 0;
+            }
+
+            .card {
+                margin: 0;
+                width: 100%;
+                padding: 0;
+            }
+
+            .card h1 {
+                font-size: 35px;
+            }
+
+            .card-body {
+                padding: 30px;
+            }
+
+            .card img {
+                padding: 0;
+                border-radius: 0;
+            }
+
+            .col-sm-12 {
+                padding: 0;
+            }
+
+            .card-head {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-auto">
+                <div class="card">
+                    <div class="card-head">
+                        <img class="card-img-top" src="pizza.jpg" width="200px" height="500px" />
+                    </div>
+
+                    <div class="card-body">
+                        <h1>Margherita Pizza Recipe</h1>
+                        This classic Margherita Pizza is a timeless favorite, featuring a simple yet delicious
+                        combination of tomato sauce, fresh mozzarella cheese, basil leaves, and olive oil on a thin
+                        crust. It's the perfect dish for pizza lovers everywhere!
+                        <div class="preparation-time">
+                            <h2>Preparation time</h2>
+                            <ul>
+                                <li><strong>Total:</strong> Approximately 30 minutes</li>
+                                <li><strong>Preparation:</strong> 15 minutes</li>
+                                <li><strong>Cooking:</strong> 15 minutes</li>
+                            </ul>
+                        </div>
+                        <div class="ingredients">
+                            <h2 class="pt-3 pb-3">Ingredients</h2>
+                            <ul class="pb-3">
+                                <li>1 pizza dough (store-bought or homemade)</li>
+                                <li>1/2 cup tomato sauce</li>
+                                <li>8 oz fresh mozzarella cheese, sliced</li>
+                                <li>Fresh basil leaves</li>
+                                <li>Extra virgin olive oil</li>
+                                <li>Salt and pepper to taste</li>
+                                <li>
+                                    Optional fillings: cheese,
+                                    origano
+                                </li>
+                            </ul>
+                        </div>
+
+                        <hr />
+                        <div class="instructions pt-3">
+                            <h2 class="pb-3">Instructions</h2>
+                            <ol class="pb-3">
+                                <li>
+                                    <strong>Preheat the Oven:</strong> Preheat your oven to 475°F (245°C). If using a
+                                    pizza stone, place it in the oven to preheat as well.
+                                </li>
+                                <li>
+                                    <strong>Heat the pan:</strong> Place a non-stick frying pan
+                                    over medium heat and add butter or oil.
+                                </li>
+                                <li>
+                                    <strong>Prepare the Dough:</strong> Roll out the pizza dough on a lightly floured
+                                    surface to your desired thickness.
+                                </li>
+                                <li>
+                                    <strong>Transfer to Baking Surface:</strong> Transfer the rolled-out dough to a
+                                    pizza peel or lightly greased baking sheet
+                                </li>
+                                <li>
+                                    <strong>Add Sauce:</strong> Spread the tomato sauce evenly over the pizza dough,
+                                    leaving a small border around the edges.
+                                </li>
+                                <li>
+                                    <strong>Arrange Cheese:</strong> Arrange the sliced mozzarella cheese on top of the
+                                    sauce.
+                                </li>
+                                <li>
+                                    <strong>Add Basil Leaves:</strong> Tear the fresh basil leaves and scatter them over
+                                    the cheese.
+                                </li>
+                                <li>
+                                    <strong>Drizzle Olive Oil:</strong> Drizzle a little extra virgin olive oil over the
+                                    pizza, and season with salt and pepper to taste.
+                                </li>
+                                <li>
+                                    <strong>Bake the Pizza:</strong> Carefully transfer the pizza to the preheated oven
+                                    or pizza stone. Bake for about 12-15 minutes, or until the crust is golden brown and
+                                    the cheese is bubbly and melted.
+                                </li>
+                                <li>
+                                    <strong>Cool and Serve:</strong> Remove the pizza from the oven and let it cool for
+                                    a few minutes before slicing. Serve hot and enjoy your delicious Margherita Pizza!
+                                </li>
+                            </ol>
+                        </div>
+                        <hr />
+                        <h2 class="pt-3 pb-3">Nutrition</h2>
+                        The table below shows nutritional values per serving without the
+                        additional fillings.<br />
+                        <div class="nutritions">
+                            <div class="row ps-4">
+                                <div class="col-6">Calories</div>
+                                <div class="col-6">
+                                    <span class="amount">Approximately 250 per slice</span>
+                                </div>
+                            </div>
+
+                            <hr />
+                            <div class="row ps-4">
+                                <div class="col-6">Carbs</div>
+                                <div class="col-6"><span class="amount">Approximately 30g per slice</span></div>
+                            </div>
+
+                            <hr />
+                            <div class="row ps-4">
+                                <div class="col-6">Protein</div>
+                                <div class="col-6"><span class="amount">Approximately 12g per slice</span></div>
+                            </div>
+
+                            <hr />
+                            <div class="row ps-4">
+                                <div class="col-6">Fat</div>
+                                <div class="col-6"><span class="amount">Approximately 10g per slice</span></div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
